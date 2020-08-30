@@ -1,0 +1,15 @@
+body {
+    color: white;
+    margin-bottom: 10%;
+}
+
+a:link, a:visited {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: white;
+    text-decoration: none;
+}
+

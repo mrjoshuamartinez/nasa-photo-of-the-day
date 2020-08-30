@@ -1,15 +1,32 @@
-import React from "react";
-import "./navBar.css";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-function NavBar() {
-    return (
-    <div className="navBar">
-        <div className="title">
-            <div>Date: { 'date' }</div>
-            <div>NASA</div>
+
+function NavBar(prop) {
+
+        const [startDate, setStartDate] = useState(prop.date);
+        const ExampleCustomInput = ({ value, onClick }) => (
+          <button className="example-custom-input" onClick={onClick}>
+            {value}
+          </button>
+        );
+        return (
+
+        <div className="navBar">
+            <div className="title">
+              <input 
+                type="date"
+                onChange={ evt => {
+                  prop.setDate(evt.target.value)
+                  setStartDate(evt.target.value)
+                }}
+                value={ startDate }
+              ></input>
+              <div>NASA</div>
+            </div>
         </div>
-    </div>
-    )
-  }
+        );
+};
 
-  export default NavBar;
+export default NavBar;

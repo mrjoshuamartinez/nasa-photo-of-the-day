@@ -1,0 +1,15 @@
+body {
+    color: white;
+}
+
+p {
+    text-align: left;
+    font-size: larger;
+    padding: 5% 10% 5% 10%;
+}
+
+img {
+    width: 60%;
+    height: 60%;
+    box-shadow: 4px 8px 12px white;
+}
